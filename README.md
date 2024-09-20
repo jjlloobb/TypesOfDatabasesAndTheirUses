@@ -2,6 +2,8 @@ Workshop Types of Databases and their uses
 
 ![image](https://github.com/user-attachments/assets/1ce1f7d9-e2c9-4cf6-a33d-7324fcfec379)
 
+![image](https://github.com/user-attachments/assets/08348b36-2896-415a-a52f-c652e98bac76)
+
 What they do? 
 
 Databases are logical structures used to organize and store data for future processing, retrieval, or evaluation, these structures are nearly always managed by an application called a database management system or DBMS.
