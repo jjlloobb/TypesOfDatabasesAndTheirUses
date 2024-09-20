@@ -1,4 +1,4 @@
-Workshop Types of Databases and their uses
+"Workshop Types of Databases and their uses"
 
 ![image](https://github.com/user-attachments/assets/1ce1f7d9-e2c9-4cf6-a33d-7324fcfec379)
 
@@ -70,15 +70,23 @@ Distributed Caching
 ![image](https://github.com/user-attachments/assets/a3908fd8-82be-457a-a3ec-b3291756b694)
 
 
+We use multiple databases as follows:
 
+- Sql Server
+- MySql
+- PostgreSql
+- MariaDb
+- Oracle
+- Redis
+- MongoDb
+- Neo4j
 
+Solution:
 
+UI in .NET 6.0 CBTW.Microservices.UI.Hosting
 
+Microservice Human Resources in .NET 6.0 CBTW.Microservices.HumanResources.Hosting
 
+Microservice Call Center in .NET 6.0 CBTW.Microservices.CallCenter.Hosting
 
-
-
-
-
-
-
+"Workshop Types of Databases and their uses"
