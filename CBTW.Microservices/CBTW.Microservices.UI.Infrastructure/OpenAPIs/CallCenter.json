@@ -1,0 +1,644 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CallCenter Microservice API",
+    "version": "v1"
+  },
+  "paths": {
+    "/CallCenter/Index": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarClientes": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarClientesResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarCliente": {
+      "post": {
+        "tags": [
+          "CallCenter"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ConsultarClienteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarClienteResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/CrearCliente": {
+      "post": {
+        "tags": [
+          "CallCenter"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CrearClienteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CrearClienteResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ActualizarCliente": {
+      "put": {
+        "tags": [
+          "CallCenter"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ActualizarClienteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ActualizarClienteResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarTiposDeDocumento": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarTiposDeDocumentoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarCiudades": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarCiudadesResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarTelefonosCC": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarTelefonosCCResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarPQRs": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarPQRsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/ConsultarPQR": {
+      "get": {
+        "tags": [
+          "CallCenter"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ConsultarPQRRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ConsultarPQRResponse"
+            }
+          }
+        }
+      }
+    },
+    "/CallCenter/CrearPQR": {
+      "post": {
+        "tags": [
+          "CallCenter"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CrearPQRRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CrearPQRResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ActualizarClienteRequest": {
+      "type": "object",
+      "properties": {
+        "tipoDocumento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "nombreCompleto": {
+          "type": "string"
+        },
+        "codigoPaisCelular": {
+          "type": "string"
+        },
+        "celular": {
+          "type": "string"
+        },
+        "ciudad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "telefonoCC": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ActualizarClienteResponse": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CiudadResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ClienteResponse": {
+      "type": "object",
+      "properties": {
+        "tipoDocumento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "nombreCompleto": {
+          "type": "string"
+        },
+        "codigoPaisCelular": {
+          "type": "string"
+        },
+        "celular": {
+          "type": "string"
+        },
+        "ciudad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "telefonoCC": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarCiudadesResponse": {
+      "type": "object",
+      "properties": {
+        "ciudades": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CiudadResponse"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarClienteRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "tipoDocumento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarClienteResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "tipoDocumento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "nombreCompleto": {
+          "type": "string"
+        },
+        "codigoPaisCelular": {
+          "type": "string"
+        },
+        "celular": {
+          "type": "string"
+        },
+        "ciudad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "telefonoCC": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarClientesResponse": {
+      "type": "object",
+      "properties": {
+        "clientes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClienteResponse"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarPQRRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "idCustomer": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarPQRResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "idCustomer": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarPQRsResponse": {
+      "type": "object",
+      "properties": {
+        "pqRs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PQRResponse"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarTelefonosCCResponse": {
+      "type": "object",
+      "properties": {
+        "telefonosCC": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TelefonoCCResponse"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ConsultarTiposDeDocumentoResponse": {
+      "type": "object",
+      "properties": {
+        "tiposDeDocumento": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TiposDeDocumentoResponse"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "CrearClienteRequest": {
+      "type": "object",
+      "properties": {
+        "tipoDocumento": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "documento": {
+          "type": "string"
+        },
+        "nombreCompleto": {
+          "type": "string"
+        },
+        "codigoPaisCelular": {
+          "type": "string"
+        },
+        "celular": {
+          "type": "string"
+        },
+        "ciudad": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fechaNacimiento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "telefonoCC": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CrearClienteResponse": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CrearPQRRequest": {
+      "type": "object",
+      "properties": {
+        "customer": {
+          "type": "string"
+        },
+        "asunto": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CrearPQRResponse": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "PQRResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "idCustomer": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TelefonoCCResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "codigoPaisCelular": {
+          "type": "string"
+        },
+        "celular": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TiposDeDocumentoResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

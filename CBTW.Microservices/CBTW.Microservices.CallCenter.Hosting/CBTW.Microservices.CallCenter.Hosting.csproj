@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBTW.Microservices.CallCenter.Application\CBTW.Microservices.CallCenter.Application.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.CallCenter.Domain\CBTW.Microservices.CallCenter.Domain.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.CallCenter.Infrastructure\CBTW.Microservices.CallCenter.Infrastructure.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.Platform\CBTW.Microservices.Platform.csproj" />
+  </ItemGroup>
+
+</Project>

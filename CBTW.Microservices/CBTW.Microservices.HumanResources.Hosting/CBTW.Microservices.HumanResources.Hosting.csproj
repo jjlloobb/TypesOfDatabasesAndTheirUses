@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBTW.Microservices.HumanResources.Application\CBTW.Microservices.HumanResources.Application.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.HumanResources.Domain\CBTW.Microservices.HumanResources.Domain.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.HumanResources.Infrastructure\CBTW.Microservices.HumanResources.Infrastructure.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.Platform\CBTW.Microservices.Platform.csproj" />
+  </ItemGroup>
+
+</Project>

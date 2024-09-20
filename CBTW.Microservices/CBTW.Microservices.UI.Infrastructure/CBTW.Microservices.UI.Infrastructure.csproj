@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NSwag.ApiDescription.Client" Version="14.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBTW.Microservices.UI.Application\CBTW.Microservices.UI.Application.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.UI.Domain\CBTW.Microservices.UI.Domain.csproj" />
+    <ProjectReference Include="..\CBTW.Microservices.UI\CBTW.Microservices.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <OpenApiReference Include="OpenAPIs\CallCenter.json" CodeGenerator="NSwagCSharp" Namespace="CBTW.Microservices.UI.Infrastructure.Providers.CallCenter" ClassName="CallCenterClient /GenerateClientInterfaces:true /UseBaseUrl:false /AdditionalNamespaceUsages:CBTW.Microservices.UI.Infrastructure.Exceptions /GenerateExceptionClasses:false">
+      <SourceUri>https://localhost:30003/swagger/v1/swagger.json</SourceUri>
+    </OpenApiReference>
+  </ItemGroup>
+
+</Project>
