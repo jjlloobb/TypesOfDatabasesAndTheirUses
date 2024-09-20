@@ -41,6 +41,6 @@ public class Program
                 pattern: "{controller=Home}/{action=Index}/{id?}");
         });
 
-        app.Run();
+        app.Run(); 
     }
 }
